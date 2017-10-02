@@ -1,0 +1,195 @@
+/* Style Sheet */
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.row {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  -webkit-column-gap: 75%;
+}
+
+.container > h1 {
+  font-size: 45px;
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
+}
+
+/* Home Background */
+#homebackground {
+  background: url('../img/cancun.jpg');
+  background-size: cover;
+  background-position: center bottom;
+  height: 100%;
+  width: 100;
+  position: relative;
+}
+
+#homebackground > #homebackground-page {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#homebackground > #homebackground-page > h1 {
+  color: #ffffff;
+  margin-top: -120px;
+  font-size: 65px;
+  font-family: 'Source Code Pro', monospace;
+}
+
+/* About Section */
+#about-section {
+  padding: 40px 0;
+}
+
+.col-md-4 > h1 {
+  font-style: italic;
+  text-align: center;
+}
+
+.col-md-4 > h2, h3 {
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
+}
+
+/* Experience Section */
+#experience-section {
+  padding: 40px 0;
+  background-color: #003366;
+}
+
+/* Navigation */
+.custom-navigation {
+  background: #000010;
+  opacity: .7;
+  height: 70px;
+  width: 100%;
+  z-index: 999999999;
+}
+
+.custom-navigation #site-name {
+  color: #ffffff;
+  font-size: 35px;
+  font-family: 'Oswald', sans-serif;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  padding-top: 6px;
+}
+
+/* Right Links */
+.custom-navigation #right-links {
+  display: inline-block;
+}
+
+.custom-navigation #right-links{
+  list-style: none;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: -10px -10px 0 0;
+}
+
+.custom-navigation #right-links > li {
+  display: inline-block;
+  padding-right: 15px;
+}
+
+/* Left Links */
+.custom-navigation #left-links {
+  display: inline-block;
+}
+
+.custom-navigation #left-links {
+  list-style: none;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: -10px -10px 0 0;
+}
+
+.custom-navigation #left-links > li {
+  display: inline-block;
+  padding-left: 15px;
+}
+
+.custom-navigation #left-links > li > a {
+  color: #ffffff;
+  font-size: 20px;
+  font-family: 'Oswald', sans-serif;
+  text-decoration: none;
+}
+
+.custom-navigation #left-links.visible > li {
+  display: block;
+  padding-left: 0;
+  font-size: 40px;
+  font-family: 'Oswald', sans-serif;
+  margin-top: 20px;
+}
+
+/* Visible Class */
+.custom-navigation > #right-links.visible {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  top: 45%;
+}
+
+.custom-navigation > #left-links.visible {
+  background: #000000;
+  height: 100%;
+  width: 100%;
+  display: table-column;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Media Queries */
+@media(max-width: 767px) {
+  /* Mobile Navigation */
+  #hamburger, #close {
+    color: #ffffff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 20px 25px;
+    z-index: 99999999;
+  }
+
+  #close {
+    display: none;
+  }
+
+  .custom-navigation > #right-links {
+     display: none;
+     padding: 0;
+  }
+
+  .custom-navigation > #left-links {
+     display: none;
+     padding: 0;
+  }
+
+  #homebackground > #homebackground-page > h1 {
+    font-size: 45px;
+  }
+
+  .sm-dev-padding {
+    padding: 30px;
+  }
+}
